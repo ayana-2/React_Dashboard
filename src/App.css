@@ -1,0 +1,321 @@
+
+@import "tailwindcss";
+
+/* Common */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #252b36;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 5%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    background: #2861d9;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.registered {
+    margin-left: auto;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Main */
+
+.main {
+    width: 90%;
+    max-width: 1250px;
+    margin: 25px auto;
+    flex: 1;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    gap: 5px;
+    background: #f1f2f5;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.navbar button {
+    border: none;
+    background: transparent;
+    color: #555;
+    padding: 9px 25px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.navbar button.active {
+    background: white;
+    color: #222;
+    box-shadow: 0 1px 5px #ddd;
+}
+
+/* Welcome */
+
+.welcome {
+    background: linear-gradient(110deg, #2864e8, #194bd1);
+    color: white;
+    padding: 25px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.welcome-icon {
+    font-size: 28px;
+}
+
+.welcome h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.welcome p {
+    font-size: 13px;
+    color: #dbe7ff;
+}
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 5px #00000008;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-top p {
+    font-size: 12px;
+    color: #555;
+}
+
+.stat-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card h2 {
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.stat-card > p {
+    font-size: 11px;
+    color: #777;
+}
+
+/* Card Colors */
+
+.blue {
+    color: #3474bd;
+    background: #edf5ff;
+}
+
+.green {
+    color: #239b61;
+    background: #eaf9f1;
+}
+
+.red {
+    color: #d94d4d;
+    background: #fff0f0;
+}
+
+.purple {
+    color: #9146b5;
+    background: #f6edff;
+}
+
+/* Quick Actions */
+
+.quick-actions {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px #00000008;
+}
+
+.quick-actions h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.quick-description {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.action-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.action-card {
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    padding: 15px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.action-card:hover {
+    border-color: #2864e8;
+}
+
+.action-icon {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.action-card h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.action-card p {
+    font-size: 11px;
+    color: #777;
+}
+
+/* Footer */
+
+.footer {
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #777;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .action-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        width: 94%;
+    }
+
+    .registered {
+        display: none;
+    }
+
+    .header {
+        padding: 12px;
+    }
+
+    .header-title h2 {
+        font-size: 14px;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar button {
+        flex: 1;
+        padding: 9px 5px;
+        font-size: 11px;
+    }
+
+    .welcome {
+        padding: 18px;
+    }
+
+    .welcome h2 {
+        font-size: 16px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
